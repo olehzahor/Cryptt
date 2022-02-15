@@ -20,6 +20,6 @@ extension NetworkManagerInterface {
                                method: HTTPMethod,
                                headers: Headers?,
                                completion: @escaping ((APIResponse<T>) -> Void)) {
-        callApi(url: url, body: body?.jsonBody(), method: method, headers: headers,  completion: completion)
+        callApi(url: url, body: body?.jsonBody(), method: method, headers: headers, completion: completion)
     }
 }

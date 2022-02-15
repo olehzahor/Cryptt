@@ -21,7 +21,6 @@ protocol AssetCellDelegate: AnyObject {
 class AssetCell: UITableViewCell {
     weak var delegate: AssetCellDelegate?
     
-    
     private let separator = UIView {
         $0.snp.makeConstraints { $0.height.equalTo(1) }
         $0.backgroundColor = .lightGray.withAlphaComponent(1/2)

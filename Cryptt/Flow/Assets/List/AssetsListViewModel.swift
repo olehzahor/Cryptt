@@ -23,7 +23,7 @@ protocol AssetsListViewModelDelegate: AnyObject {
 class AssetsListViewModel: AssetsListViewModelInterface {
     weak var delegate: AssetsListViewModelDelegate?
     
-    private var isFetching: Bool = false
+    private var isFetching = false
     
     private let pageSize = 10
     private var filter: String?

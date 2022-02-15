@@ -76,7 +76,8 @@ class WatchlistViewModel: WatchlistViewModelInterface {
 }
 
 extension WatchlistViewModel: WatchlistManagerDelegate {
-    func manager(_ manager: WatchlistManagerInterface, didUpdateWatchlist updateType: NSFetchedResultsChangeType, at indexPath: IndexPath?, newIndexPath: IndexPath?) {
+    func manager(_ manager: WatchlistManagerInterface, didUpdateWatchlist updateType: NSFetchedResultsChangeType,
+                 at indexPath: IndexPath?, newIndexPath: IndexPath?) {
         guard let indexPath = indexPath else { return }
         switch updateType {
         case .insert:

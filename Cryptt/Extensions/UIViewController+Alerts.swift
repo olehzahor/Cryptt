@@ -20,9 +20,9 @@ extension UIViewController {
     }
     
     internal func showAlert(title: String?,
-                           message: String,
-                           okAction: ((UIAlertAction) -> Void)? = nil,
-                           cancelAction: ((UIAlertAction) -> Void)? = nil) {
+                            message: String,
+                            okAction: ((UIAlertAction) -> Void)? = nil,
+                            cancelAction: ((UIAlertAction) -> Void)? = nil) {
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .alert)

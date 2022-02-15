@@ -21,7 +21,7 @@ class ChartView: UIView {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
 
-        let attributes: [NSAttributedString.Key : Any] = [
+        let attributes: [NSAttributedString.Key: Any] = [
             .paragraphStyle: paragraphStyle,
             .font: UIFont.systemFont(ofSize: 12.0),
             .foregroundColor: UIColor.blue

@@ -17,10 +17,10 @@ final class AppIconManager {
         guard UIApplication.shared.supportsAlternateIcons else {
             return
         }
-        //Change the icon to a specific image with given name
+        // Change the icon to a specific image with given name
         let choosenIcon = icon
         UIApplication.shared.setAlternateIconName(choosenIcon?.rawValue) { [weak self](error) in
-            //After app icon changed, print our error or success message
+            // After app icon changed, print our error or success message
             if let error = error {
                 print("App icon failed to due to \(error.localizedDescription)")
             } else {

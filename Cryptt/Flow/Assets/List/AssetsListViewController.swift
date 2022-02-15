@@ -107,6 +107,7 @@ extension AssetsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         coordinator?.showDetails(viewModel.getAssetModel(forCellAt: indexPath.row))
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

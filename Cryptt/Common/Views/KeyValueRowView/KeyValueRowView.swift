@@ -1,6 +1,3 @@
-// 
-//
-
 import UIKit
 
 protocol KeyValueRowViewInterface: UIView {
