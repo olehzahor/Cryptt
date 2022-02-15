@@ -43,7 +43,8 @@ class ChartView: UIView {
     }
     
     private func drawStrings(minValue: Double, minPoint: CGPoint,
-                                 maxValue: Double, maxPoint: CGPoint) {
+                             maxValue: Double, maxPoint: CGPoint) {
+        guard !prices.isEmpty else { return }
         let minString = createString(price: minValue)
         let adaptedMinPoint = CGPoint(x: calculateStringXPosition(stringSize: minString.size(),
                                                                   pointX: minPoint.x),
