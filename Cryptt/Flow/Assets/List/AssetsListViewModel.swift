@@ -63,9 +63,14 @@ class AssetsListViewModel: AssetsListViewModelInterface {
     func fetchData(reset: Bool) {
         guard !isFetching else { return }
         isFetching = true
+        if reset {
+            isFetching = false
+            assetsManager.resetCurrentPage()
+        }
         assetsManager.getAssets(filter: filter, pageSize: pageSize) { [weak self] response in
-            if reset { self?.resetAssets() }
-            self?.handleAssetsResponse(response)
+            guard let self = self else { return }
+            if reset { self.assetModels = [] }
+            self.handleAssetsResponse(response)
         }
     }
 

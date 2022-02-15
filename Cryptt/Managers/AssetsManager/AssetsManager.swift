@@ -20,8 +20,11 @@ class AssetsManager: AssetsManagerInterface {
     private let assetsService: AssetsServiceInterface
     private var currentOffset = 0
     
+    private(set) var isReachedLastPage = false
+    
     func resetCurrentPage() {
         currentOffset = 0
+        isReachedLastPage = false
     }
     
     func getAsset(id: String, completion: @escaping (APIResponse<Asset>) -> Void) {
@@ -37,12 +40,17 @@ class AssetsManager: AssetsManagerInterface {
     
     func getAssets(filter: String?, pageSize: Int,
                    completion: @escaping (APIResponse<[Asset]>) -> Void) {
+        if isReachedLastPage { return }
         let data = AssetsRequest(search: filter, limit: pageSize, offset: currentOffset)
         assetsService.getAssets(data) { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let collection):
                 completion(.success(collection.data))
+                if collection.data.isEmpty {
+                    self.isReachedLastPage = true
+                    return
+                }
                 self.currentOffset += pageSize
             case .failure(let error):
                 completion(.failure(error))
