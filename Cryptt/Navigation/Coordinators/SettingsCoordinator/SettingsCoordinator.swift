@@ -19,8 +19,8 @@ class SettingsCoordinator: SettingsCoordinatorProtocol {
                                           image: R.image.gear(), tag: 0)
 
     func start() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .white
+        let viewModel = SettingsViewModel(iconManager: AppIconManager())
+        let vc = SettingsViewController(viewModel: viewModel)
         vc.tabBarItem = tabBarItem
         
         navigationController.pushViewController(vc, animated: false)

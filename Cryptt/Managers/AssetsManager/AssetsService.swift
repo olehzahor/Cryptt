@@ -37,7 +37,6 @@ class AssetsService: AssetsServiceInterface {
         guard let url = try? NetworkRouter.asset(id: id).getUrl().asURL() else {
             return completion(.failure(CRError(message: "Incorrect URL")))
         }
-        print(url)
         networkManager.callApi(url: url,
                                body: nil,
                                method: .get,
@@ -46,7 +45,7 @@ class AssetsService: AssetsServiceInterface {
     }
 
     func getAssetHistory(id: String, completion: @escaping (APIResponse<AssetHistoryResponse>) -> Void) {
-        guard let url = try? NetworkRouter.history(id: id.lowercased()).getUrl().asURL() else {
+        guard let url = try? NetworkRouter.history(id: id).getUrl().asURL() else {
             return completion(.failure(CRError(message: "Incorrect URL")))
         }
         networkManager.callApi(url: url,

@@ -57,6 +57,10 @@
 		CDD8BBB827BC0CB8008B6348 /* WatchlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8BBB727BC0CB8008B6348 /* WatchlistManager.swift */; };
 		CDD8BBBD27BC121B008B6348 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8BBBA27BC121B008B6348 /* WatchlistViewController.swift */; };
 		CDD8BBBF27BC121B008B6348 /* WatchlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8BBBC27BC121B008B6348 /* WatchlistViewModel.swift */; };
+		CDD8BBC427BC2538008B6348 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8BBC127BC2538008B6348 /* SettingsViewController.swift */; };
+		CDD8BBC627BC2538008B6348 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8BBC327BC2538008B6348 /* SettingsViewModel.swift */; };
+		CDD8BBC927BC274D008B6348 /* AppIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8BBC827BC274D008B6348 /* AppIconManager.swift */; };
+		CDD8BBCB27BC276D008B6348 /* AppIconRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8BBCA27BC276D008B6348 /* AppIconRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +118,10 @@
 		CDD8BBB727BC0CB8008B6348 /* WatchlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistManager.swift; sourceTree = "<group>"; };
 		CDD8BBBA27BC121B008B6348 /* WatchlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
 		CDD8BBBC27BC121B008B6348 /* WatchlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewModel.swift; sourceTree = "<group>"; };
+		CDD8BBC127BC2538008B6348 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CDD8BBC327BC2538008B6348 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		CDD8BBC827BC274D008B6348 /* AppIconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconManager.swift; sourceTree = "<group>"; };
+		CDD8BBCA27BC276D008B6348 /* AppIconRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 		CD13FEA127BBBA3900C50AF5 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				CDD8BBC027BC2521008B6348 /* Settings */,
 				CDD8BBB927BC11EC008B6348 /* Watchlist */,
 				CD13FEA227BBBA4600C50AF5 /* Assets */,
 			);
@@ -290,6 +299,7 @@
 		CDC2640527BBAD8D00F8898C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CDD8BBC727BC2744008B6348 /* AppIconManager */,
 				CDD8BBB427BC0C04008B6348 /* WatchlistManager */,
 				CDD8BBB327BC0BFA008B6348 /* CoreDataManager */,
 				CDD8BB9427BBDF3D008B6348 /* IconsManager */,
@@ -500,6 +510,24 @@
 			path = Watchlist;
 			sourceTree = "<group>";
 		};
+		CDD8BBC027BC2521008B6348 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CDD8BBC127BC2538008B6348 /* SettingsViewController.swift */,
+				CDD8BBC327BC2538008B6348 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CDD8BBC727BC2744008B6348 /* AppIconManager */ = {
+			isa = PBXGroup;
+			children = (
+				CDD8BBC827BC274D008B6348 /* AppIconManager.swift */,
+				CDD8BBCA27BC276D008B6348 /* AppIconRepository.swift */,
+			);
+			path = AppIconManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -657,10 +685,14 @@
 				CDC2641627BBAEE100F8898C /* Dependencies.swift in Sources */,
 				CD13FECA27BBD1ED00C50AF5 /* Encodable+JsonBody.swift in Sources */,
 				CD13FEB827BBCCE900C50AF5 /* CRNumberFormatter.swift in Sources */,
+				CDD8BBC927BC274D008B6348 /* AppIconManager.swift in Sources */,
 				CD13FEC527BBD1ED00C50AF5 /* NetworkManager.swift in Sources */,
+				CDD8BBCB27BC276D008B6348 /* AppIconRepository.swift in Sources */,
 				CDD8BBB627BC0C1F008B6348 /* CoreDataManager.swift in Sources */,
 				CDD8BB9827BBE13B008B6348 /* TableViewUpdater.swift in Sources */,
 				CDD8BB9A27BBEBCE008B6348 /* UIViewController+Alerts.swift in Sources */,
+				CDD8BBC627BC2538008B6348 /* SettingsViewModel.swift in Sources */,
+				CDD8BBC427BC2538008B6348 /* SettingsViewController.swift in Sources */,
 				CDC263F727BBAB9D00F8898C /* Cryptt.xcdatamodeld in Sources */,
 				CDD8BBA927BBF7BE008B6348 /* KeyValueRowView.swift in Sources */,
 				CD13FEB527BBC41900C50AF5 /* UIImageView+URL.swift in Sources */,

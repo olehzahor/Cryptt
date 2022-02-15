@@ -49,7 +49,7 @@ class AssetDetailsViewModel: AssetDetailsViewModelInterface {
     }
     
     func fetchData() {
-        assetsManager.getAssetHistory(assetId: asset.name) { [weak self] response in
+        assetsManager.getAssetHistory(assetId: asset.id ?? "") { [weak self] response in
             self?.handleHistoryResponse(response)
         }
     }
