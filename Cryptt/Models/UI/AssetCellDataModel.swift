@@ -50,7 +50,7 @@ extension AssetCellDataModel {
     
     init(_ storedAsset: StoredAsset) {
         self.init(id: storedAsset.coinId,
-                  imageUrl: nil,
+                  imageUrl: IconsManager.getIconUrl(forSymbol: storedAsset.symbol ?? ""),
                   symbol: storedAsset.symbol ?? "",
                   name: storedAsset.name ?? "",
                   price: nil, delta: nil,
