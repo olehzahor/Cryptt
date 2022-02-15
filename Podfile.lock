@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (5.5.0)
+  - R.swift (6.1.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - SDWebImage (5.12.2):
+    - SDWebImage/Core (= 5.12.2)
+  - SDWebImage/Core (5.12.2)
+  - SnapKit (4.2.0)
+  - SwiftLint (0.46.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - R.swift
+  - SDWebImage (~> 5.0)
+  - SnapKit (~> 4.0)
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - R.swift
+    - R.swift.Library
+    - SDWebImage
+    - SnapKit
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  SDWebImage: 240e5c12b592fb1268c1d03b8c90d90e8c2ffe82
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftLint: aaa29a9f649316095a9079595cb60906bd899353
+
+PODFILE CHECKSUM: 9ea1110247092c7c22de0da6a38ae181c737eae2
+
+COCOAPODS: 1.11.2

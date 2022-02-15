@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  Cryptt
+
+  Created by Oleh Zahoriansky on 15.02.2022.
+  
+*/
+
+// MARK: - Screen Titles
+"assetsTitle" = "Assets";
+"watchlistTitle" = "Watchlist";
+"settingsTitle" = "Settings";
+
+// MARK: - Alerts
+"alertFailedTitle" = "Error";
+"alertOkAction" = "OK";
+"alertCancelAction" = "Cancel";
+
+// MARK: - Asset Details
+"marketCap" = "Market Cap";
+"supply" = "Supply";
+"volume" = "Volume (24h)";
