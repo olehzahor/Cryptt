@@ -10,5 +10,6 @@ target 'Cryptt' do
   pod 'SnapKit', '~> 4.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'Alamofire'
+  pod 'SwiftLint'
 
 end

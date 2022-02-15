@@ -59,11 +59,12 @@ extension AssetDetailsViewController: AssetDetailsViewModelDelegate {
     }
     
     func viewModel(_ viewModel: AssetDetailsViewModelInterface, didFetchPrices prices: [Double]) {
-        print(prices)
         rootView.setChart(data: prices)
+        rootView.stopSpinner()
     }
     
     func viewModel(_ viewModel: AssetDetailsViewModelInterface, didFailWithError message: String) {
         showFailedAlert(message: message)
+        rootView.stopSpinner()
     }
 }

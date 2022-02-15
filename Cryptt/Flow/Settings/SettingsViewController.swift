@@ -5,7 +5,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     private var viewModel: SettingsViewModelInterface
-    
+
     private lazy var tableUpdater = TableUpdater(tableView)
     private let tableView = UITableView {
         $0.backgroundColor = .white
@@ -20,7 +20,7 @@ class SettingsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
+
     private func setupView() {
         viewModel.delegate = self
         setupTableView()

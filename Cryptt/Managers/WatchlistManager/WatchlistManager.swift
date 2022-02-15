@@ -93,7 +93,6 @@ class WatchlistManager: NSObject, WatchlistManagerInterface {
     }
 }
 
-
 extension WatchlistManager: NSFetchedResultsControllerDelegate {
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
                     didChange anObject: Any,

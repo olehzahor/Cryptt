@@ -1,5 +1,5 @@
 import Foundation
-
+// swiftlint:disable identifier_name
 // MARK: - Network case section
 enum NetworkRouter {
     // MARK: Auth cases

@@ -8,6 +8,7 @@ protocol AssetDetailsViewInterface: UIView {
     func setPrice(_ price: Double?, delta: Double?)
     func setMarketCap(_ marketCap: Double?, supply: Double?, volume: Double?)
     func setChart(data: [Double])
+    func stopSpinner()
 }
 
 protocol AssetDetailsViewDelegate: AnyObject {
@@ -18,7 +19,7 @@ class AssetDetailsView: UIView {
     weak var delegate: AssetDetailsViewDelegate?
     
     private let titleLabel = UILabel {
-        $0.font = .systemFont(ofSize: 64, weight: .light)
+        $0.font = .systemFont(ofSize: 64, weight: .ultraLight)
         $0.textAlignment = .center
     }
     
@@ -27,9 +28,13 @@ class AssetDetailsView: UIView {
         $0.textAlignment = .center
     }
     
+    private let spinner = UIActivityIndicatorView {
+        $0.hidesWhenStopped = true
+        $0.startAnimating()
+    }
+    
     private let chartView = ChartView {
         $0.snp.makeConstraints { $0.height.equalTo(200) }
-        $0.isHidden = true
     }
     
     private let tableView = UITableView {
@@ -69,6 +74,9 @@ class AssetDetailsView: UIView {
         mainStack.snp.makeConstraints {
             $0.top.leading.trailing.equalTo(safeAreaLayoutGuide)
         }
+        
+        mainStack.addSubview(spinner)
+        spinner.snp.makeConstraints { $0.center.equalTo(chartView) }
     }
 
     init() {
@@ -96,6 +104,9 @@ extension AssetDetailsView: AssetDetailsViewInterface {
     
     func setChart(data: [Double]) {
         chartView.setData(data)
-        chartView.isHidden = false
+    }
+    
+    func stopSpinner() {
+        spinner.stopAnimating()
     }
 }

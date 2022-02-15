@@ -52,7 +52,6 @@ class AssetsListViewModel: AssetsListViewModelInterface {
     
     func setFilter(_ filter: String?) {
         self.filter = filter
-        resetAssets()
     }
     
     private func resetAssets() {

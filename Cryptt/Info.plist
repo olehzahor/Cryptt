@@ -8,10 +8,10 @@
         <dict>
             <key>CFBundleIconFiles</key>
             <array>
-                <string>Yellow</string>
+                <string></string>
             </array>
             <key>CFBundleIconName</key>
-            <string>Yellow</string>
+            <string></string>
             <key>UIPrerenderedIcon</key>
             <false/>
         </dict>

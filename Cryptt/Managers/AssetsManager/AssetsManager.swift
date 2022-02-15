@@ -25,7 +25,7 @@ class AssetsManager: AssetsManagerInterface {
     }
     
     func getAsset(id: String, completion: @escaping (APIResponse<Asset>) -> Void) {
-        assetsService.getAsset(id: id) { [weak self] response in
+        assetsService.getAsset(id: id) { response in
             switch response {
             case .success(let data):
                 completion(.success(data.data))

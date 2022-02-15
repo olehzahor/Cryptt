@@ -61,6 +61,12 @@
 		CDD8BBC627BC2538008B6348 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8BBC327BC2538008B6348 /* SettingsViewModel.swift */; };
 		CDD8BBC927BC274D008B6348 /* AppIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8BBC827BC274D008B6348 /* AppIconManager.swift */; };
 		CDD8BBCB27BC276D008B6348 /* AppIconRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8BBCA27BC276D008B6348 /* AppIconRepository.swift */; };
+		CDD8BBD427BC38F3008B6348 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD8BBCE27BC38EF008B6348 /* Yellow.png */; };
+		CDD8BBD527BC38F3008B6348 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD8BBCF27BC38F0008B6348 /* White.png */; };
+		CDD8BBD627BC38F3008B6348 /* Yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD8BBD027BC38F1008B6348 /* Yellow@2x.png */; };
+		CDD8BBD727BC38F3008B6348 /* Black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD8BBD127BC38F2008B6348 /* Black@2x.png */; };
+		CDD8BBD827BC38F3008B6348 /* White@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD8BBD227BC38F2008B6348 /* White@2x.png */; };
+		CDD8BBD927BC38F3008B6348 /* Black.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD8BBD327BC38F2008B6348 /* Black.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +128,12 @@
 		CDD8BBC327BC2538008B6348 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		CDD8BBC827BC274D008B6348 /* AppIconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconManager.swift; sourceTree = "<group>"; };
 		CDD8BBCA27BC276D008B6348 /* AppIconRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconRepository.swift; sourceTree = "<group>"; };
+		CDD8BBCE27BC38EF008B6348 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
+		CDD8BBCF27BC38F0008B6348 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
+		CDD8BBD027BC38F1008B6348 /* Yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow@2x.png"; sourceTree = "<group>"; };
+		CDD8BBD127BC38F2008B6348 /* Black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Black@2x.png"; sourceTree = "<group>"; };
+		CDD8BBD227BC38F2008B6348 /* White@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "White@2x.png"; sourceTree = "<group>"; };
+		CDD8BBD327BC38F2008B6348 /* Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +271,7 @@
 		CDC263EB27BBAB9D00F8898C /* Cryptt */ = {
 			isa = PBXGroup;
 			children = (
+				CDD8BBCD27BC3891008B6348 /* AppIcons */,
 				CD13FE9C27BBB62A00C50AF5 /* R.generated.swift */,
 				CDC2640527BBAD8D00F8898C /* Managers */,
 				CDC2641427BBAECC00F8898C /* Models */,
@@ -528,6 +541,19 @@
 			path = AppIconManager;
 			sourceTree = "<group>";
 		};
+		CDD8BBCD27BC3891008B6348 /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				CDD8BBD327BC38F2008B6348 /* Black.png */,
+				CDD8BBD127BC38F2008B6348 /* Black@2x.png */,
+				CDD8BBCF27BC38F0008B6348 /* White.png */,
+				CDD8BBD227BC38F2008B6348 /* White@2x.png */,
+				CDD8BBCE27BC38EF008B6348 /* Yellow.png */,
+				CDD8BBD027BC38F1008B6348 /* Yellow@2x.png */,
+			);
+			path = AppIcons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -537,6 +563,7 @@
 			buildPhases = (
 				C5D1B0CF6B0B8BE70C4EABDA /* [CP] Check Pods Manifest.lock */,
 				CDC2641C27BBB53100F8898C /* ShellScript */,
+				CDD8BBCC27BC3312008B6348 /* ShellScript */,
 				CDC263E527BBAB9C00F8898C /* Sources */,
 				CDC263E627BBAB9C00F8898C /* Frameworks */,
 				CDC263E727BBAB9C00F8898C /* Resources */,
@@ -589,9 +616,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD8BBD927BC38F3008B6348 /* Black.png in Resources */,
 				CDC263FC27BBAB9F00F8898C /* LaunchScreen.storyboard in Resources */,
+				CDD8BBD427BC38F3008B6348 /* Yellow.png in Resources */,
+				CDD8BBD827BC38F3008B6348 /* White@2x.png in Resources */,
+				CDD8BBD527BC38F3008B6348 /* White.png in Resources */,
 				CD13FEA027BBB6BB00C50AF5 /* Localizable.strings in Resources */,
+				CDD8BBD627BC38F3008B6348 /* Yellow@2x.png in Resources */,
 				CDC263F927BBAB9F00F8898C /* Assets.xcassets in Resources */,
+				CDD8BBD727BC38F3008B6348 /* Black@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +688,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		CDD8BBCC27BC3312008B6348 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 

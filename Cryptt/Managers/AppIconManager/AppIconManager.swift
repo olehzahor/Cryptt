@@ -18,7 +18,7 @@ final class AppIconManager {
             return
         }
         //Change the icon to a specific image with given name
-        let choosenIcon = icon == .yellowIcon ? nil : icon
+        let choosenIcon = icon
         UIApplication.shared.setAlternateIconName(choosenIcon?.rawValue) { [weak self](error) in
             //After app icon changed, print our error or success message
             if let error = error {
