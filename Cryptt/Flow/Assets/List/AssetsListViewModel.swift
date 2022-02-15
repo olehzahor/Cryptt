@@ -61,10 +61,12 @@ class AssetsListViewModel: AssetsListViewModelInterface {
     }
     
     func fetchData(reset: Bool) {
+        if reset { isFetching = false }
+        
         guard !isFetching else { return }
-        isFetching = true
+        
         if reset {
-            isFetching = false
+            isFetching = true
             assetsManager.resetCurrentPage()
         }
         assetsManager.getAssets(filter: filter, pageSize: pageSize) { [weak self] response in
