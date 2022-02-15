@@ -44,6 +44,7 @@ class AssetsListViewModel: AssetsListViewModelInterface {
         case .success(let newAssets):
             assetModels += newAssets
         case .failure(let error):
+            assetModels = []
             delegate?.viewModel(self, didFailWithError: error.localizedDescription)
         }
         delegate?.viewModel(self, didUpdateDataSource: .reloadData)
@@ -51,6 +52,7 @@ class AssetsListViewModel: AssetsListViewModelInterface {
     }
     
     func setFilter(_ filter: String?) {
+        guard self.filter != filter else { return }
         self.filter = filter
     }
     
@@ -61,9 +63,9 @@ class AssetsListViewModel: AssetsListViewModelInterface {
     
     func fetchData(reset: Bool) {
         guard !isFetching else { return }
-        if reset { resetAssets() }
         isFetching = true
         assetsManager.getAssets(filter: filter, pageSize: pageSize) { [weak self] response in
+            if reset { self?.resetAssets() }
             self?.handleAssetsResponse(response)
         }
     }

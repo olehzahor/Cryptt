@@ -112,8 +112,14 @@ extension AssetsListViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension AssetsListViewController: UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
-    func updateSearchResults(for searchController: UISearchController) {
-        viewModel.setFilter(searchController.searchBar.text)
+    @objc private func performSearch(_ text: String?) {
+        viewModel.setFilter(text)
         viewModel.fetchData(reset: true)
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
+        let text = searchController.searchBar.text
+        self.perform(#selector(performSearch), with: text, afterDelay: 0.5)
     }
 }
