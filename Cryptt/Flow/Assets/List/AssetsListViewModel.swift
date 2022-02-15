@@ -44,7 +44,6 @@ class AssetsListViewModel: AssetsListViewModelInterface {
         case .success(let newAssets):
             assetModels += newAssets
         case .failure(let error):
-            assetModels = []
             delegate?.viewModel(self, didFailWithError: error.localizedDescription)
         }
         delegate?.viewModel(self, didUpdateDataSource: .reloadData)
